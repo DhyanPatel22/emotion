@@ -63,7 +63,7 @@ const Signup = () => {
         toast.success(data.message);
         localStorage.setItem('isVerified', "false");
         const timer = setTimeout(() => {
-        window.location.replace('/login');
+        window.location.replace('/');
         }, 1200);
         return () => clearTimeout(timer);
       } else {
@@ -146,7 +146,7 @@ const Signup = () => {
           <section className='px-12 py-8'>
             <nav className='w-full flex justify-between'>
               <div className="flex items-center"><img src={logo} className="w-8 h-8" /><h1 className="font-semibold text-xl ml-2">EmoSense</h1></div>
-              <div className="lg:inline md:inline sm:inline xl:inline hidden"><h1>Already Have an Account? <Link to="/login" className="text-[#20DC49]">Login!</Link></h1></div>
+              <div className="lg:inline md:inline sm:inline xl:inline hidden"><h1>Already Have an Account? <Link to="/" className="text-[#20DC49]">Login!</Link></h1></div>
             </nav>
             <div className='mt-[50px]'>
               <h1 className='font-semibold text-xl text-center'>Get Started with MAKER</h1>

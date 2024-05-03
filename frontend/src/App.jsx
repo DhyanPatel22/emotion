@@ -22,8 +22,8 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/" element={isVerified === "false" ? <Navigate to="/verification" /> : <Home />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={isVerified === "false" ? <Navigate to="/verification" /> : <Home />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={isVerified === "false" ? <Navigate to="/verification" /> : <Dashboard />} />
           <Route path="/logout" element={<Logout />} />

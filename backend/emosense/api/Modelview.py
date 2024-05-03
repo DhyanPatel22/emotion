@@ -8,10 +8,13 @@ import numpy as np
 import cv2
 import base64
 from django.core.files.base import ContentFile
+import os
 
 # Load the pre-trained model and cascade classifier
-classifier = load_model('E:/IBM project/emosense-main/backend/emosense/api/model.h5')
-face_classifier = cv2.CascadeClassifier('E:/IBM project/emosense-main/backend/emosense/api/haarcascade_frontalface_default.xml')
+model_path = os.path.join(os.path.dirname(__file__), 'facialemotionmodel.h5')
+classifier = load_model(model_path)
+# classifier = load_model('E:/IBM project/emosense-main/backend/emosense/api/model.h5')
+#face_classifier = cv2.CascadeClassifier('E:/IBM project/emosense-main/backend/emosense/api/haarcascade_frontalface_default.xml')
 # emotion_labels = ['angry', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise']
 
 @api_view(['POST'])
@@ -28,7 +31,8 @@ def predict_emotion(request):
 
         # Process the image data
         # Load the pre-trained model
-        classifier = load_model('E:/IBM project/emosense-main/backend/emosense/api/model.h5')
+        classifier = load_model(model_path)
+        # classifier = load_model('E:/IBM project/emosense-main/backend/emosense/api/model.h5')
         emotion_labels = ['angry', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise']
 
         # Convert image data to OpenCV format

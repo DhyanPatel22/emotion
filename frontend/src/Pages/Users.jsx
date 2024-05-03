@@ -56,7 +56,7 @@ const [loading, setLoading] = useState(false);
         setLoading(true);
         try {
           const id = localStorage.getItem("id");
-          const response = await axios.get(`http://localhost:8000/api/user/all`);
+          const response = await axios.get(`https://emotion-3uen.onrender.com/api/user/all`);
           const data = await response
           console.log(data);
           setEmotionData(data?.data);

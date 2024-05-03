@@ -11,7 +11,7 @@ const OtpVerification = () => {
         const id = localStorage.getItem('id');
         setLoading(true);
         try{
-        const response = await axios.post(`http://localhost:8000/api/checkOtp/${id}`, { otp :otp.join('')});
+        const response = await axios.post(`https://emotion-3uen.onrender.com/api/checkOtp/${id}`, { otp :otp.join('')});
         const data = response.data;
         if (data.status === 'success') {
             toast.success('OTP Verified Successfully');

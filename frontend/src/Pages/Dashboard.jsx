@@ -70,7 +70,7 @@ const Dashboard = () => {
             const dataURL = canvas.toDataURL('image/png');
 
             try {
-                const response = await fetch('http://localhost:8000/api/model/', {
+                const response = await fetch('https://emotion-3uen.onrender.com/api/model/', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -121,7 +121,7 @@ const Dashboard = () => {
     const fetchData = async () => {
         try {
             const id = localStorage.getItem("id");
-            const response = await fetch(`http://localhost:8000/api/profile/${id}`, {
+            const response = await fetch(`https://emotion-3uen.onrender.com/api/profile/${id}`, {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json',

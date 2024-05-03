@@ -9,7 +9,7 @@ const EmotionDetectionHistory = () => {
   const fetchData = async () => {
     try {
       const id = localStorage.getItem("id");
-      const response = await axios.get(`http://localhost:8000/api/emotionHistory/${id}`);
+      const response = await axios.get(`https://emotion-3uen.onrender.com/api/emotionHistory/${id}`);
       const data = await response
       console.log(data);
       setEmotionData(data?.data);

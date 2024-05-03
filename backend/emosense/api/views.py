@@ -85,8 +85,8 @@ def signup(request):
             return Response({'status': 'error', 'message': 'Failed to add data'}, status=status.HTTP_400_BAD_REQUEST)
 
 def send_otp_email(receiver_email, otp):
-    sender_email = "shahpurav308@gmail.com"
-    sender_password = "npgb ndoe saio zghl"
+    sender_email = "dhyanpatel20@gnu.ac.in"
+    sender_password = "uwga dvjc vijf ewyq"
     # Send the OTP to the user's email using Django's send_mail function
     subject = f'Otp for verification'
     message_content = f'''

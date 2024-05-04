@@ -11,10 +11,13 @@ from django.core.files.base import ContentFile
 import os
 
 # Load the pre-trained model and cascade classifier
-model_path = os.path.join(os.path.dirname(__file__), 'facialemotionmodel.h5')
+model_path = os.path.join(os.path.dirname(__file__), 'model.h5')
 classifier = load_model(model_path)
+face_model = os.path.join(os.path.dirname(__file__), 'haarcascade_frontalface_default.xml')
+print(face_model)
+print(model_path)
 # classifier = load_model('E:/IBM project/emosense-main/backend/emosense/api/model.h5')
-#face_classifier = cv2.CascadeClassifier('E:/IBM project/emosense-main/backend/emosense/api/haarcascade_frontalface_default.xml')
+face_classifier = cv2.CascadeClassifier(face_model)
 # emotion_labels = ['angry', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise']
 
 @api_view(['POST'])

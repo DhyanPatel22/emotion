@@ -36,6 +36,11 @@ const Signup = () => {
       toast.error('All fields are required');
       return;
     }
+    if (formData.phone.length !== 10)
+      {
+        toast.error("Phone Number should be 10 Digit!")
+        return;
+      }
 
     if (formData.password !== formData.rePassword) {
       toast.error('Passwords do not match');

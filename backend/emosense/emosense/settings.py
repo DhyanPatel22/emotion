@@ -117,9 +117,9 @@ DATABASES = {
   'default': {
     'ENGINE': 'django.db.backends.postgresql',
     'NAME': "emosense",
-    'USER': 'fpd_owner',
-    'PASSWORD': 'lnUR1hYDj2dp',
-    'HOST':'ep-curly-voice-a1c14j9s.ap-southeast-1.aws.neon.tech',
+    'USER': 'emosense_owner',
+    'PASSWORD': '5CcpUxyaRL4j',
+    'HOST':'ep-red-grass-a5md2gw6.us-east-2.aws.neon.tech',
     'PORT': 5432,
     'OPTIONS': {
       'sslmode': 'require',

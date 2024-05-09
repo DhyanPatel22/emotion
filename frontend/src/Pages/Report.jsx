@@ -10,7 +10,7 @@ const [imageData, setImageData] = useState([]);
         setSelectedButton(button);
     };
 
-    const sortOptions = ['All', 'Happy', 'Surprise', 'Fear', 'Anger', 'Sad', 'Neutral', 'Disgust'];   
+    const sortOptions = ['All', 'happy', 'surprise', 'fear', 'angry', 'sad', 'neutral', 'disgust'];   
     const fetchData = async () => {
         try {
           const id = localStorage.getItem("id");
